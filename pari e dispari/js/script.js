@@ -7,17 +7,17 @@ Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (u
 
 // chiedere all'utente di scegliere tra pari e dispari
 const puntataUser = prompt("Scegli tra pari e dispari")
-console.log(puntataUser);
+console.log("puntata user: ", puntataUser);
 
 // chiedere all'utente un numero da 1 a 5
 const numeroUser = parseInt(prompt("Inserisci un numero da 1 a 5"));
-console.log(numeroUser);
+console.log("numero user: ", numeroUser);
 
 let result;
 
 // richiamo le funzioni
 let numPc = numeroCasualePc();
-console.log(numPc);
+console.log("numero pc: ", numPc);
 
 sommaNumeriUserPc();
 console.log(sommaNumeriUserPc());
