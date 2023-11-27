@@ -5,22 +5,36 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 */
 
+// seleziono input e bottone
+const inputPuntata = document.getElementById("puntata");
+const inputNumeroUser = document.getElementById("numero-user");
+const sendButton = document.getElementById("sendbutton");
+
+
 // chiedere all'utente di scegliere tra pari e dispari
-const puntataUser = prompt("Scegli tra pari e dispari")
-console.log("puntata user: ", puntataUser);
+const puntataUser = inputPuntata.value;
+// console.log("puntata user: ", puntataUser);
 
 // chiedere all'utente un numero da 1 a 5
-const numeroUser = parseInt(prompt("Inserisci un numero da 1 a 5"));
-console.log("numero user: ", numeroUser);
+const numeroUser = inputNumeroUser.value;
+// console.log("numero user: ", numeroUser);
 
 let result;
 
 // richiamo le funzioni
 let numPc = numeroCasualePc();
-console.log("numero pc: ", numPc);
+// console.log("numero pc: ", numPc);
 
-sommaNumeriUserPc();
-console.log(sommaNumeriUserPc());
+const risultatoGioco = sommaNumeriUserPc();
+// console.log(sommaNumeriUserPc());
+
+// funzionamento bottone al click
+sendButton.addEventListener("click",
+    function(){
+    document.getElementById("numero-pc").innerHTML = `Il numero del pc è: ${numPc}`;
+    document.getElementById("risultato").innerHTML = risultatoGioco;
+    }
+);
 
 
 
@@ -43,8 +57,8 @@ function sommaNumeriUserPc(){
     }
 
     if(result === puntataUser){
-        return "hai vinto";
+        return "Hai vinto!";
     }else{
-        return "hai perso"
+        return "Hai perso :("
     }
 }
