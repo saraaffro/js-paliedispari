@@ -31,6 +31,7 @@ function numeroCasualePc() {
     return numPc;
 }
 
+
 // Creare una funzione che sommi i due numeri e stabilire se questa è pari o dispari, quindi dichiarare la vincita
 function sommaNumeriUserPc(){
     let sommaNumeri = numeroUser + numPc;
