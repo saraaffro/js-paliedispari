@@ -8,14 +8,7 @@ Creare una funzione per capire se la parola inserita è palindroma
 const userWord = prompt("Inserisci una parola");
 console.log(userWord);
 
-let wordDivided = userWord.split('');
-console.log(wordDivided);
 
-let wordReverse = wordDivided.reverse();
-console.log(wordReverse);
-
-let wordReverseResult = wordReverse.join('');
-console.log(wordReverseResult);
 
 parolaPalindomaCheck();
 console.log(parolaPalindomaCheck());
@@ -23,6 +16,16 @@ console.log(parolaPalindomaCheck());
 
 // Creare una funzione per capire se la parola inserita è palindroma
 function parolaPalindomaCheck(){
+    
+    let wordDivided = userWord.split('');
+    // console.log(wordDivided);
+
+    let wordReverse = wordDivided.reverse();
+    // console.log(wordReverse);
+
+    let wordReverseResult = wordReverse.join('');
+    console.log(wordReverseResult);
+    
     if(userWord === wordReverseResult){
         return "è palindroma";
     } else{
